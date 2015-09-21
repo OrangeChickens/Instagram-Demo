@@ -20,14 +20,14 @@ class ViewController: UIViewController {
             //navigate to users profile(recent medias)
         }
         
-        InstagramDemo().fetchUserProfileData ("1077922881", callback: {(org: InstagramDemo.userProfile) -> () in
+        InstagramDemo().fetchUserProfileData ("0", callback: {(org: InstagramDemo.userProfile) -> () in
             
-            print(org) // to see if there is output
+        print(org.numberOfFollowing) // to see if there is output
 
     })
-        InstagramDemo().fetchRecentMediaData ("399380794", callback: {(org: [InstagramDemo.media]) -> () in
+        InstagramDemo().fetchRecentMediaData ("x", callback: {(org: [InstagramDemo.media]) -> () in
             
-            print(org) // to see if theres output
+           // print(org) // to see if theres output
             
         })
 
