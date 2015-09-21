@@ -1,0 +1,44 @@
+//
+//  ViewController.swift
+//  Inst Demo
+//
+//  Created by Yicheng Liang on 9/20/15.
+//  Copyright © 2015 Yicheng Liang. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    var medias:[InstagramDemo.media] = []
+    var id = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        InstagramDemo().fetchMediaData{ (medias:[InstagramDemo.media]) -> () in
+            self.medias = medias
+            //if there is click response to user name
+            //navigate to users profile(recent medias)
+        }
+        
+        InstagramDemo().fetchUserProfileData ("1077922881", callback: {(org: InstagramDemo.userProfile) -> () in
+            
+            print(org) // to see if there is output
+
+    })
+        InstagramDemo().fetchRecentMediaData ("399380794", callback: {(org: [InstagramDemo.media]) -> () in
+            
+            print(org) // to see if theres output
+            
+        })
+
+        
+}
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
