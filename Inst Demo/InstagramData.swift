@@ -21,8 +21,12 @@ public class InstagramDemo {
         let text: String
         let profilePicture: String
         let tag: [JSON]
-        let comments:[JSON]
+        let comments:[Comment]
         let likes: String
+    }
+    struct Comment {
+        let text: String
+        let from: String
     }
     
     //User UserProfile struc containning all info we can get from userprofile api from instagram
@@ -46,9 +50,12 @@ public class InstagramDemo {
     func populateMediaWith(data: AnyObject?, callback: ([media]) -> Void) {
         let json = JSON(data!)
         var medias = [media]()
-       // print(json["data"].arrayValue[])
         for member in json["data"].arrayValue{
-            medias.append(media(takenPhoto: member["link"].stringValue, userId:(member["user"]["id"]).stringValue, userName:(member["user"]["username"]).stringValue, text:member["caption"]["text"].stringValue,profilePicture:member["user"]["profile_picture"].stringValue, tag: member["tags"].arrayValue, comments:member["comments"].arrayValue, likes:member["likes"]["count"].stringValue))
+            var comments = [Comment]()
+            for comment in member["comments"]["data"].arrayValue {
+                comments.append(Comment(text: comment["text"].stringValue, from: comment["from"]["username"].stringValue))
+            }
+            medias.append(media(takenPhoto: member["images"]["standard_resolution"]["url"].stringValue, userId:(member["user"]["id"]).stringValue, userName:(member["user"]["username"]).stringValue, text:member["caption"]["text"].stringValue,profilePicture:member["user"]["profile_picture"].stringValue, tag: member["tags"].arrayValue, comments:comments, likes:member["likes"]["count"].stringValue))
     }
         callback(medias)
         
