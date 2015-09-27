@@ -17,7 +17,14 @@ class HeaderTableViewCell: UITableViewCell {
         didSet {
             if let setHeader = header {
                 self.headUser.text = setHeader.userName
-                self.headTime.text = setHeader.time
+                let timeInterval = Double(setHeader.time)
+                let date = NSDate(timeIntervalSince1970: timeInterval!)
+                let formatter = NSDateFormatter()
+                let usDateFormat = NSDateFormatter.dateFormatFromTemplate("MMddyyyy", options: 0, locale: NSLocale(localeIdentifier: "en-US"))
+                formatter.dateFormat = usDateFormat
+                let usSwiftDayString = formatter.stringFromDate(date)
+
+                self.headTime.text = usSwiftDayString
                 if let url = NSURL(string: setHeader.profilePicture) {
                                 if let data = NSData(contentsOfURL: url){
                                     
