@@ -55,17 +55,17 @@ class InstaTableViewController: UITableViewController {
         return medias[section].comments.count + 1
        
     }
-
+    // so i have row 1 for media, other rows for comments and customized comments cell separatorStyle.
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if (indexPath.row == 0){
-            tableView.rowHeight = 500
+        if (indexPath.row == 0){ // first row to media.
+            tableView.rowHeight = 550 // magic number.... I ll fix this later.
            
             let cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell", forIndexPath: indexPath) as!MediaTableViewCell
 
             let currentMedia = medias[indexPath.section]
             cell.media = currentMedia
             return cell
-            
+        //comments row
         }else {
             tableView.rowHeight = 15 // comments are short
             tableView.separatorStyle = UITableViewCellSeparatorStyle.None // take out the line separator.
@@ -78,7 +78,7 @@ class InstaTableViewController: UITableViewController {
         }
        }
     
-    
+    // populate header info
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderTableViewCell
         let currentHeader = medias[section]

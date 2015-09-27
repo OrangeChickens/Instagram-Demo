@@ -20,7 +20,7 @@ public class InstagramDemo {
         let userName: String
         let text: String
         let profilePicture: String
-        let tag: [JSON]
+        let time: String
         let comments:[Comment]
         let likes: String
     }
@@ -55,7 +55,7 @@ public class InstagramDemo {
             for comment in member["comments"]["data"].arrayValue {
                 comments.append(Comment(text: comment["text"].stringValue, from: comment["from"]["username"].stringValue))
             }
-            medias.append(media(takenPhoto: member["images"]["standard_resolution"]["url"].stringValue, userId:(member["user"]["id"]).stringValue, userName:(member["user"]["username"]).stringValue, text:member["caption"]["text"].stringValue,profilePicture:member["user"]["profile_picture"].stringValue, tag: member["tags"].arrayValue, comments:comments, likes:member["likes"]["count"].stringValue))
+            medias.append(media(takenPhoto: member["images"]["standard_resolution"]["url"].stringValue, userId:(member["user"]["id"]).stringValue, userName:(member["user"]["username"]).stringValue, text:member["caption"]["text"].stringValue,profilePicture:member["user"]["profile_picture"].stringValue, time: member["created_time"].stringValue, comments:comments, likes:member["likes"]["count"].stringValue))
     }
         callback(medias)
         

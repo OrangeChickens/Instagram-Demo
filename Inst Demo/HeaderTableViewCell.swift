@@ -17,8 +17,7 @@ class HeaderTableViewCell: UITableViewCell {
         didSet {
             if let setHeader = header {
                 self.headUser.text = setHeader.userName
-                self.headTime.text = "1h"
-                //headPic.text = setHeader.profilePicture
+                self.headTime.text = setHeader.time
                 if let url = NSURL(string: setHeader.profilePicture) {
                                 if let data = NSData(contentsOfURL: url){
                                     

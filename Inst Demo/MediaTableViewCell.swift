@@ -5,6 +5,7 @@
 //  Created by Yicheng Liang on 9/26/15.
 //  Copyright © 2015 Yicheng Liang. All rights reserved.
 //
+//populate media cell
 
 import UIKit
 
