@@ -7,28 +7,24 @@
 //
 
 import UIKit
+import DateTools
+
 
 class HeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var headPic: UIImageView!
     @IBOutlet weak var headTime: UILabel!
     @IBOutlet weak var headUser: UILabel!
+    var instanceDate: NSDate = NSDate()
     var header: InstagramDemo.media? {
         didSet {
             if let setHeader = header {
                 self.headUser.text = setHeader.userName
                 self.headUser.textColor = UIColor(red: 18.0/255.0, green: 86.0/255.0, blue: 136.0/255.0, alpha: 1.0)
                 let timeInterval = Double(setHeader.time)
-                
                 let date = NSDate(timeIntervalSince1970: timeInterval!)
-               // NSDate *timeAgoDate = [NSDate date:-4];
-
-                let formatter = NSDateFormatter()
-                let usDateFormat = NSDateFormatter.dateFormatFromTemplate("MMddyyyy", options: 0, locale: NSLocale(localeIdentifier: "en-US"))
-                formatter.dateFormat = usDateFormat
-                let usSwiftDayString = formatter.stringFromDate(date)
-
-                self.headTime.text = usSwiftDayString
+                let stringTime = instanceDate.shortTimeAgoSinceDate(date) // Time that it posted relative to now
+                self.headTime.text = stringTime
                 if let url = NSURL(string: setHeader.profilePicture) {
                                 if let data = NSData(contentsOfURL: url){
                                     

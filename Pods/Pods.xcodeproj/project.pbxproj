@@ -141,6 +141,7 @@
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECEEE9321BC7A39C008A61B6 /* TimeAgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeAgo.h; sourceTree = "<group>"; };
 		F2A3A4A70F3E534E668D2B95065E0D8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F740BC925D8A1A9730952DA8C4CEC2FC /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +291,7 @@
 				0907244BAE4F047DB91C2BA1126CF907 /* DateTools.h */,
 				8C792A0E834601A7615F3074465001EF /* NSDate+DateTools.h */,
 				BB96F9221B2A12552FA21370D8A4E296 /* NSDate+DateTools.m */,
+				ECEEE9321BC7A39C008A61B6 /* TimeAgo.h */,
 				550D8766C6C251ECDB4E9DA4F81A3838 /* Resources */,
 				04D4724D654A4CCD2F27B7AA413351AF /* Support Files */,
 			);

@@ -35,6 +35,7 @@
 		85F8B368B5144B2E17EAC047 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFD50773AAF65BEDE97F2A43 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5CE2CD4D6116A3AD52BE37 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0834571BC772C900411267 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		ECEBB27F1BB4F99B006F541F /* InstaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaTableViewController.swift; sourceTree = "<group>"; };
 		ECEFD5E71BAF73A500F87110 /* Inst Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inst Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEFD5EA1BAF73A500F87110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 				ECEFD5EA1BAF73A500F87110 /* AppDelegate.swift */,
 				ECF4CCF21BB749A900A0B095 /* MediaTableViewCell.swift */,
 				ECF4CCF41BB749B700A0B095 /* CommentTableViewCell.swift */,
+				EC0834571BC772C900411267 /* Header.h */,
 				ECF4CCF01BB7489F00A0B095 /* HeaderTableViewCell.swift */,
 				ECEFD60A1BAF73E900F87110 /* InstagramData.swift */,
 				ECEFD5EC1BAF73A500F87110 /* ViewController.swift */,
@@ -426,6 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TalentSpark/Inst Demo/Inst Demo/Header.h";
 			};
 			name = Debug;
 		};
@@ -438,6 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TalentSpark/Inst Demo/Inst Demo/Header.h";
 			};
 			name = Release;
 		};
