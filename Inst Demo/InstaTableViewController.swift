@@ -27,7 +27,7 @@ class InstaTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        tableView.backgroundColor = UIColor.grayColor()
+       //tableView.backgroundColor = UIColor.grayColor()
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         super.viewDidLoad()
         InstagramDemo().fetchMediaData{ (medias:[InstagramDemo.media]) -> () in
@@ -48,7 +48,23 @@ class InstaTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return medias.count
     }
-
+    // spacing for cell
+    override func tableView(_ tableView: UITableView,
+        heightForHeaderInSection section: Int) -> CGFloat { return 30
+    }
+    //spacing for footer
+    override func tableView(_ tableView: UITableView,
+        heightForFooterInSection section: Int) -> CGFloat { return 10
+            
+    }
+    //set footer view color to white
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
+        footerView.backgroundColor = UIColor.whiteColor()
+        
+        return footerView
+    }
+    //
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //1 for photocell, the rest for comments.
@@ -61,7 +77,7 @@ class InstaTableViewController: UITableViewController {
             tableView.rowHeight = 550 // magic number.... I ll fix this later.
            
             let cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell", forIndexPath: indexPath) as!MediaTableViewCell
-
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             let currentMedia = medias[indexPath.section]
             cell.media = currentMedia
             return cell
@@ -70,7 +86,7 @@ class InstaTableViewController: UITableViewController {
             tableView.rowHeight = 15 // comments are short
             tableView.separatorStyle = UITableViewCellSeparatorStyle.None // take out the line separator.
             let cell = tableView.dequeueReusableCellWithIdentifier("CommentsCell", forIndexPath: indexPath) as!CommentTableViewCell
-
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             let currentMedia = medias[indexPath.section]
             cell.row = indexPath.row
             cell.media = currentMedia
@@ -87,6 +103,13 @@ class InstaTableViewController: UITableViewController {
         
         return cell
 
+    }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     /*

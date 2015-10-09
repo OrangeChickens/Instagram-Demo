@@ -13,26 +13,37 @@ class ViewController: UIViewController {
     var id = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        InstagramDemo().fetchMediaData{ (medias:[InstagramDemo.media]) -> () in
-            self.medias = medias
-            //if there is click response to user name
-            //navigate to users profile(recent medias)
-        }
-        
-        InstagramDemo().fetchUserProfileData ("0", callback: {(org: InstagramDemo.userProfile) -> () in
-            
-        print(org.numberOfFollowing) // to see if there is output
+//        // Do any additional setup after loading the view, typically from a nib.
+//        InstagramDemo().fetchMediaData{ (medias:[InstagramDemo.media]) -> () in
+//            self.medias = medias
+//            //if there is click response to user name
+//            //navigate to users profile(recent medias)
+//        }
+//        
+//        InstagramDemo().fetchUserProfileData ("0", callback: {(org: InstagramDemo.userProfile) -> () in
+//            
+//        print(org.numberOfFollowing) // to see if there is output
+//
+//    })
+//        InstagramDemo().fetchRecentMediaData ("x", callback: {(org: [InstagramDemo.media]) -> () in
+//            
+//           // print(org) // to see if theres output
+//            
+//        })
 
-    })
-        InstagramDemo().fetchRecentMediaData ("x", callback: {(org: [InstagramDemo.media]) -> () in
-            
-           // print(org) // to see if theres output
-            
-        })
-
-        
 }
+    //lock orientation
+    override func shouldAutorotate() -> Bool {
+        if (UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft ||
+            UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight ||
+            UIDevice.currentDevice().orientation == UIDeviceOrientation.Unknown) {
+                return false;
+        }
+        else {
+            return true;
+        }
+    }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

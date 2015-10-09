@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (2.0.1)
+  - DateTools (1.7.0)
   - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0)
+  - DateTools
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `xcode7`)
 
 EXTERNAL SOURCES:
@@ -18,6 +20,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 1d8e208d616fbbfd2391b15eae766d07c96cdc49
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
 COCOAPODS: 0.38.2

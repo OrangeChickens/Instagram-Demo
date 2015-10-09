@@ -18,9 +18,9 @@ class MediaTableViewCell: UITableViewCell {
     var media: InstagramDemo.media? {
         didSet {
             if let setMedia = media {
-
                 self.caption.text = setMedia.text
                 self.NumberOfLike.text = "❤️" + setMedia.likes + " likes"
+                self.NumberOfLike.textColor = UIColor(red: 18.0/255.0, green: 86.0/255.0, blue: 136.0/255.0, alpha: 1.0)
                 //headPic.text = setHeader.profilePicture
                 if let url = NSURL(string: setMedia.takenPhoto) {
                     if let data = NSData(contentsOfURL: url){
@@ -52,5 +52,6 @@ class MediaTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+   
 
 }
