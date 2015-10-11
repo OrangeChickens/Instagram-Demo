@@ -22,7 +22,7 @@ class MediaTableViewCell: UITableViewCell {
             if let setMedia = media {
                 self.caption.text = setMedia.text
                 self.NumberOfLike.text = "❤️" + setMedia.likes + " likes"
-                loadImageForMediaCell(setMedia.takenPhoto, id: setMedia.userId)
+                loadImageForMediaCell(setMedia.takenPhoto, id: setMedia.time)
                 
             }
             self.populated = true
@@ -42,7 +42,7 @@ class MediaTableViewCell: UITableViewCell {
                             // Because this happens asynchronously in the background, we need to check that by the time we get here
                             // that the cell that requested the image is still the one that is being displayed.
                             // If it is not, we would have cached the image for the future but we will not display it for now.
-                            if(self.media?.userId == id) {
+                            if(self.media?.time == id) {
                                 dispatch_async(dispatch_get_main_queue()) {
                                     TakenPhoto?.image = avatarSquare
                                 }

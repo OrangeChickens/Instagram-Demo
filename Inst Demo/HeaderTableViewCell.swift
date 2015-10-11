@@ -18,6 +18,11 @@ class HeaderTableViewCell: UITableViewCell {
     var instanceDate: NSDate = NSDate()
     var header: InstagramDemo.media? {
         didSet {
+            self.headPic.layer.borderWidth = 1
+            self.headPic.layer.masksToBounds = false
+            self.headPic.layer.borderColor = UIColor.blackColor().CGColor
+            self.headPic.layer.cornerRadius = self.headPic.frame.height/2
+            self.headPic.clipsToBounds = true
             if let setHeader = header {
                 self.headUser.text = setHeader.userName
                 self.headUser.textColor = UIColor(red: 18.0/255.0, green: 86.0/255.0, blue: 136.0/255.0, alpha: 1.0)
