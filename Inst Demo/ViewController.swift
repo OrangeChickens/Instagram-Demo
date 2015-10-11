@@ -33,16 +33,17 @@ class ViewController: UIViewController {
 
 }
     //lock orientation
-    override func shouldAutorotate() -> Bool {
-        if (UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft ||
-            UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight ||
-            UIDevice.currentDevice().orientation == UIDeviceOrientation.Unknown) {
-                return false;
-        }
-        else {
-            return true;
-        }
-    }
+//    override func shouldAutorotate() -> Bool {
+//        if (UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft ||
+//            UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight ||
+//            UIDevice.currentDevice().orientation == UIDeviceOrientation.Unknown) {
+//                return false;
+//        }
+//        else {
+//            return true;
+//        }
+//    }
+       
    
 
     override func didReceiveMemoryWarning() {
