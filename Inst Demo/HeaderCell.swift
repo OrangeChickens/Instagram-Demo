@@ -8,18 +8,18 @@
 
 import UIKit
 import DateTools
-protocol HeaderTableViewCellDelegate{
-    func cellTapped(cell:HeaderTableViewCell)
+protocol HeaderCellDelegate{
+    func cellTapped(cell:HeaderCell)
 }
 
 
-class HeaderTableViewCell: UITableViewCell {
-
+class HeaderCell: UITableViewCell {
+    
     @IBOutlet weak var headPic: UIImageView!
     @IBOutlet weak var headTime: UILabel!
     @IBOutlet weak var headUser: UILabel!
     var instanceDate: NSDate = NSDate()
-    var delegate: HeaderTableViewCellDelegate?
+    var delegate: HeaderCellDelegate?
     var header: InstagramDemo.media? {
         didSet {
             self.headPic.layer.borderWidth = 1
@@ -34,43 +34,29 @@ class HeaderTableViewCell: UITableViewCell {
                 let date = NSDate(timeIntervalSince1970: timeInterval!)
                 let stringTime = instanceDate.shortTimeAgoSinceDate(date) // Time that it posted relative to now
                 self.headTime.text = stringTime
-                if let url = NSURL(string: setHeader.profilePicture) {
-                                if let data = NSData(contentsOfURL: url){
-                                    
-                                    if let photo = UIImage(data: data){
-
-                                        headPic?.image = photo
-                                    }
-                                    
-                                } else {
-                                    self.headPic?.image = UIImage(named: "World")
-                                }
-                            }
+                self.headPic.setImageWithURL(NSURL(string: setHeader.profilePicture)!)
                 
             }
         }
     }
-
-
-            
-        
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
-        self.addGestureRecognizer(tapRecognizer)
+        let tapRecognizerOnName = UITapGestureRecognizer(target: self, action: "onTap")
+        headPic.addGestureRecognizer(tapRecognizer)
+        headUser.addGestureRecognizer(tapRecognizerOnName)
         // Initialization code
     }
     func onTap() {
         delegate?.cellTapped(self)
     }
     
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 class CommentTableViewCell: UITableViewCell {
 
     //@IBOutlet weak var commentText: UILabel!
-    @IBOutlet weak var CommentUser: UILabel!
+    @IBOutlet weak var commentUser: UILabel!
     var row = 1
     var media: InstagramDemo.media? {
         didSet {
@@ -22,8 +22,8 @@ class CommentTableViewCell: UITableViewCell {
                 descString.addAttribute(NSForegroundColorAttributeName, value: UIColor.grayColor(), range: NSMakeRange(0, descString.length))
                 attrString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 18.0/255.0, green: 86.0/255.0, blue: 136.0/255.0, alpha: 1.0), range: NSMakeRange(0, attrString.length))
                 attrString.appendAttributedString(descString)
-                self.CommentUser?.attributedText = attrString
-                self.CommentUser.font = UIFont(name: CommentUser.font.fontName, size: 15)
+                self.commentUser?.attributedText = attrString
+                self.commentUser.font = UIFont(name: commentUser.font.fontName, size: 15)
             }
         }
     }

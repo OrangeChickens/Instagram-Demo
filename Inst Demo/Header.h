@@ -9,5 +9,6 @@
 #ifndef Header_h
 #define Header_h
 #import "DateTools/NSDate+DateTools.h"
+#import "AFNetworking/UIImageView+AFNetworking.h"
 
 #endif /* Header_h */

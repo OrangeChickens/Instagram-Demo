@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegate {
+class InstaTableViewController: UITableViewController,HeaderCellDelegate {
     @IBOutlet weak var posts: UILabel!
     @IBOutlet weak var following: UILabel!
     @IBOutlet weak var followers: UILabel!
@@ -43,6 +43,7 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
     }
     
     override func viewDidLoad() {
+        self.tableView.registerNib(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "HeaderCell")
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         super.viewDidLoad()
         toggleHeader()
@@ -97,7 +98,6 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
                 self.tableView.reloadData()
                     })
                 }
-           // self.tableView.reloadData()
             
             })
        
@@ -116,7 +116,7 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
     }
     // spacing for cell
     override func tableView(_ tableView: UITableView,
-        heightForHeaderInSection section: Int) -> CGFloat { return 30
+        heightForHeaderInSection section: Int) -> CGFloat { return 60
     }
     //spacing for footer
     override func tableView(_ tableView: UITableView,
@@ -142,8 +142,7 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
         if (indexPath.row == 0){ // first row to media.
             let cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell", forIndexPath: indexPath) as!MediaTableViewCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-            let currentMedia = medias[indexPath.section]
-            cell.media = currentMedia
+            cell.media = medias[indexPath.section]
             return cell
         //comments row
         }else {
@@ -159,7 +158,7 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
     
     
     //Didtap
-    func cellTapped(cell: HeaderTableViewCell) {
+    func cellTapped(cell: HeaderCell) {
         let tappedUser = cell.header
         let id = tappedUser?.userId
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -170,9 +169,13 @@ class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegat
         controller.title = tappedUser?.userName
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
     // populate header info
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderCell
+        var frame = cell.frame
+        frame.size.height = 100
+        cell.frame = frame
         let currentHeader = medias[section]
         cell.header = currentHeader
         cell.delegate = self
