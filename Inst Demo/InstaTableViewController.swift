@@ -8,14 +8,13 @@
 
 import UIKit
 
-class InstaTableViewController: UITableViewController {
+class InstaTableViewController: UITableViewController,HeaderTableViewCellDelegate {
     @IBOutlet weak var posts: UILabel!
     @IBOutlet weak var following: UILabel!
     @IBOutlet weak var followers: UILabel!
     @IBOutlet weak var ClickedUserFollowers: UILabel!
     @IBOutlet weak var ClickedUserPosts: UILabel!
     @IBOutlet weak var ClickedUserFollowing: UILabel!
-    @IBOutlet var tapReconizer: UITapGestureRecognizer!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var ClickedUserImage: UIImageView!
     @IBOutlet weak var refresh: UIRefreshControl!
@@ -158,34 +157,29 @@ class InstaTableViewController: UITableViewController {
         }
        }
     
+    
+    //Didtap
+    func cellTapped(cell: HeaderTableViewCell) {
+        let tappedUser = cell.header
+        let id = tappedUser?.userId
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("Feed") as! InstaTableViewController
+        controller.flag = true
+        controller.userID = id!
+        controller.profilePicture = (tappedUser?.profilePicture)!
+        controller.title = tappedUser?.userName
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     // populate header info
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderTableViewCell
-        // cell  = self
-        //self.tapReconizer = UITapGestureRecognizer(target: self, action: "didTap:")
-        //self.tableView.addGestureRecognizer(self.tapReconizer)
         let currentHeader = medias[section]
         cell.header = currentHeader
+        cell.delegate = self
         return cell
 
     }
-//    func didTap(recognizer: UIGestureRecognizer) {
-//        if recognizer.state == UIGestureRecognizerState.Ended {
-////            let tapLocation = recognizer.locationInView(self.tableView)
-////            if let tapIndexPath = tableView.indexPathForRowAtPoint(tapLocation) {
-////                if let TapCell = self.tableView.cellForRowAtIndexPath(tapIndexPath) {
-////                    // Swipe happened. Do stuff!
-////                    self.performSegueWithIdentifier("showProfile", sender: TapCell)
-////
-////                }
-////            }
-//                self.performSegueWithIdentifier("showProfile", sender: recognizer)
-//
-//        }
-//    }
-//    func didSelectUserHeaderTableViewCell(Selected: Bool, UserHeader: UserHeaderTableViewCell) {
-//        print("Cell Selected!")
-//    }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -201,25 +195,6 @@ class InstaTableViewController: UITableViewController {
         { tableView.tableHeaderView = self.profileView }
         else
         { tableView.tableHeaderView = nil }
-    }
-    
-    // MARK: - Navigation
-
-     //In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destilonationViewController.
-        // Pass the selected object to the new view controller.
-        if (segue.identifier == "showProfile") {
-            let instaViewController = segue.destinationViewController as! InstaTableViewController
-            instaViewController.flag = true
-            let userInfo  = sender?.view as? HeaderTableViewCell
-            let userHeader = userInfo!.header
-            var userID = userHeader?.userId
-            instaViewController.title = userHeader?.userName
-            instaViewController.userID = userID! // set the segue views userID
-            instaViewController.profilePicture = (userHeader?.profilePicture)!
-     
-        }
     }
     
    // lock orientation

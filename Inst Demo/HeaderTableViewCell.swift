@@ -8,6 +8,9 @@
 
 import UIKit
 import DateTools
+protocol HeaderTableViewCellDelegate{
+    func cellTapped(cell:HeaderTableViewCell)
+}
 
 
 class HeaderTableViewCell: UITableViewCell {
@@ -16,6 +19,7 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var headTime: UILabel!
     @IBOutlet weak var headUser: UILabel!
     var instanceDate: NSDate = NSDate()
+    var delegate: HeaderTableViewCellDelegate?
     var header: InstagramDemo.media? {
         didSet {
             self.headPic.layer.borderWidth = 1
@@ -54,8 +58,14 @@ class HeaderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
+        self.addGestureRecognizer(tapRecognizer)
         // Initialization code
     }
+    func onTap() {
+        delegate?.cellTapped(self)
+    }
+    
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

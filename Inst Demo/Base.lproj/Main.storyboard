@@ -9,7 +9,7 @@
         <!--Feed-->
         <scene sceneID="WiL-ap-bbh">
             <objects>
-                <tableViewController id="Lat-to-ym8" customClass="InstaTableViewController" customModule="Inst_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Feed" id="Lat-to-ym8" customClass="InstaTableViewController" customModule="Inst_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="50" sectionFooterHeight="28" id="suw-xz-Sfu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,14 +111,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-M3-PLI">
-                                                    <rect key="frame" x="30" y="5" width="532" height="20.5"/>
+                                                    <rect key="frame" x="30" y="5" width="532" height="21"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isG-WQ-F9k">
-                                                    <rect key="frame" x="562" y="5" width="38" height="20.5"/>
+                                                    <rect key="frame" x="562" y="5" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -137,7 +137,6 @@
                                     <outlet property="headPic" destination="CvF-Qv-h8u" id="a8I-Im-xuE"/>
                                     <outlet property="headTime" destination="isG-WQ-F9k" id="CAf-EO-ByC"/>
                                     <outlet property="headUser" destination="Jht-M3-PLI" id="Dxq-Pt-4Ph"/>
-                                    <outletCollection property="gestureRecognizers" destination="Dgw-vd-4OU" appends="YES" id="Aiy-hQ-DZR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="55" id="lfv-hH-nI6" customClass="MediaTableViewCell" customModule="Inst_Demo" customModuleProvider="target">
@@ -240,11 +239,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuB-Jt-EwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer delaysTouchesBegan="YES" id="Dgw-vd-4OU">
-                    <connections>
-                        <segue destination="Lat-to-ym8" kind="show" identifier="showProfile" id="hhy-rB-BrE"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1974" y="-203"/>
         </scene>
@@ -300,8 +294,5 @@
             <point key="canvasLocation" x="1290" y="-59"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nfO-iw-UHR"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.27938889658174482" blue="0.47338334664523118" alpha="1" colorSpace="calibratedRGB"/>
 </document>
