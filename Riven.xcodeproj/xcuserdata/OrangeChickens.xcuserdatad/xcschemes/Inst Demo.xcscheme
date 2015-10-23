@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ECEFD5E61BAF73A500F87110"
-               BuildableName = "Inst Demo.app"
-               BlueprintName = "Inst Demo"
-               ReferencedContainer = "container:Inst Demo.xcodeproj">
+               BuildableName = "Riven.app"
+               BlueprintName = "Riven"
+               ReferencedContainer = "container:Riven.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ECEFD5FA1BAF73A500F87110"
-               BuildableName = "Inst DemoTests.xctest"
-               BlueprintName = "Inst DemoTests"
-               ReferencedContainer = "container:Inst Demo.xcodeproj">
+               BuildableName = "Riven.xctest"
+               BlueprintName = "RivenTests"
+               ReferencedContainer = "container:Riven.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ECEFD5E61BAF73A500F87110"
-            BuildableName = "Inst Demo.app"
-            BlueprintName = "Inst Demo"
-            ReferencedContainer = "container:Inst Demo.xcodeproj">
+            BuildableName = "Riven.app"
+            BlueprintName = "Riven"
+            ReferencedContainer = "container:Riven.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ECEFD5E61BAF73A500F87110"
-            BuildableName = "Inst Demo.app"
-            BlueprintName = "Inst Demo"
-            ReferencedContainer = "container:Inst Demo.xcodeproj">
+            BuildableName = "Riven.app"
+            BlueprintName = "Riven"
+            ReferencedContainer = "container:Riven.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ECEFD5E61BAF73A500F87110"
-            BuildableName = "Inst Demo.app"
-            BlueprintName = "Inst Demo"
-            ReferencedContainer = "container:Inst Demo.xcodeproj">
+            BuildableName = "Riven.app"
+            BlueprintName = "Riven"
+            ReferencedContainer = "container:Riven.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

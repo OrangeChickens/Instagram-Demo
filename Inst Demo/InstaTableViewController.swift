@@ -47,6 +47,9 @@ class InstaTableViewController: UITableViewController,HeaderCellDelegate {
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         super.viewDidLoad()
         toggleHeader()
+        self.posts.textColor = UIColor.grayColor()
+        self.followers.textColor = UIColor.grayColor()
+        self.following.textColor = UIColor.grayColor()
         //resize image to a circle
         self.ClickedUserImage.layer.borderWidth = 1
         self.ClickedUserImage.layer.masksToBounds = false
@@ -70,18 +73,10 @@ class InstaTableViewController: UITableViewController,HeaderCellDelegate {
     func updateData() {
     dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0))  {
         InstagramDemo().fetchUserProfileData(userID, callback: {userProfile  in
+           
             self.ClickedUserFollowers.text = String(userProfile.numberOfFollowers) + "\nfollowers"
-            self.ClickedUserFollowers.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
-            self.ClickedUserFollowing.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
-            self.ClickedUserPosts.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
             self.ClickedUserFollowing.text = String(userProfile.numberOfFollowing)
             self.ClickedUserPosts.text = String(userProfile.numberOfPost)
-            self.posts.font = UIFont(name: self.ClickedUserPosts.font.fontName, size: 10)
-            self.following.font = UIFont(name: self.ClickedUserPosts.font.fontName, size: 10)
-            self.followers.font = UIFont(name: self.ClickedUserPosts.font.fontName, size: 10)
-            self.posts.textColor = UIColor.grayColor()
-            self.followers.textColor = UIColor.grayColor()
-            self.following.textColor = UIColor.grayColor()
             if let url = NSURL(string: self.profilePicture ) {
                 if let data = NSData(contentsOfURL: url){
                     if let photo = UIImage(data: data){

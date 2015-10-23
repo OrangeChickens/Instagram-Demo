@@ -760,6 +760,20 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					964CEAA15E463D2CD44701A4223C6803 = {
+						DevelopmentTeam = E7FPD3YNFW;
+					};
+					B9A04D3C9B208813656510FDA8ADAE02 = {
+						DevelopmentTeam = E7FPD3YNFW;
+					};
+					BF576C7BB57E9CD44EEAF5C6B8D2965D = {
+						DevelopmentTeam = E7FPD3YNFW;
+					};
+					C1A07C0F179C29F11E9C8179B835FAAE = {
+						DevelopmentTeam = E7FPD3YNFW;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -906,6 +920,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F23C7130D5A775FBE0AF747E95C521C5 /* AFNetworking-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.6.1;
 				DEFINES_MODULE = YES;
@@ -921,6 +936,7 @@
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = AFNetworking;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -933,6 +949,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EBFF65CC6532BFDC5E40AC80BAE4E4D /* Alamofire-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEFINES_MODULE = YES;
@@ -948,6 +965,7 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Alamofire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -961,6 +979,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E2DDCB9BB3F2BE4FD5845F8CDA70917 /* SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.2.1;
 				DEFINES_MODULE = YES;
@@ -976,6 +995,7 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyJSON;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1027,6 +1047,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EBFF65CC6532BFDC5E40AC80BAE4E4D /* Alamofire-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEFINES_MODULE = YES;
@@ -1042,6 +1063,7 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Alamofire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1117,6 +1139,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F23C7130D5A775FBE0AF747E95C521C5 /* AFNetworking-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.6.1;
 				DEFINES_MODULE = YES;
@@ -1132,6 +1155,7 @@
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = AFNetworking;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1174,6 +1198,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E2DDCB9BB3F2BE4FD5845F8CDA70917 /* SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.2.1;
 				DEFINES_MODULE = YES;
@@ -1189,6 +1214,7 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftyJSON;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1202,6 +1228,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C38C128B4ADF3AE9AB5AD34CE68437 /* DateTools-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEFINES_MODULE = YES;
@@ -1217,6 +1244,7 @@
 				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = DateTools;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1229,6 +1257,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C38C128B4ADF3AE9AB5AD34CE68437 /* DateTools-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEFINES_MODULE = YES;
@@ -1244,6 +1273,7 @@
 				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DateTools;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -40,14 +40,14 @@
 		EC89185F1BD731300012D73A /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		EC8918601BD731300012D73A /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		ECEBB27F1BB4F99B006F541F /* InstaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaTableViewController.swift; sourceTree = "<group>"; };
-		ECEFD5E71BAF73A500F87110 /* Inst Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inst Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECEFD5E71BAF73A500F87110 /* Riven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEFD5EA1BAF73A500F87110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEFD5EC1BAF73A500F87110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECEFD5EF1BAF73A500F87110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECEFD5F11BAF73A500F87110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEFD5F41BAF73A500F87110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEFD5F61BAF73A500F87110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECEFD5FB1BAF73A500F87110 /* Inst DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inst DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECEFD5FB1BAF73A500F87110 /* Riven.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Riven.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEFD5FF1BAF73A500F87110 /* Inst_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inst_DemoTests.swift; sourceTree = "<group>"; };
 		ECEFD6011BAF73A500F87110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECEFD60A1BAF73E900F87110 /* InstagramData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramData.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		ECEFD5E81BAF73A500F87110 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECEFD5E71BAF73A500F87110 /* Inst Demo.app */,
-				ECEFD5FB1BAF73A500F87110 /* Inst DemoTests.xctest */,
+				ECEFD5E71BAF73A500F87110 /* Riven.app */,
+				ECEFD5FB1BAF73A500F87110 /* Riven.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ECEFD5E61BAF73A500F87110 /* Inst Demo */ = {
+		ECEFD5E61BAF73A500F87110 /* Riven */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECEFD6041BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Inst Demo" */;
+			buildConfigurationList = ECEFD6041BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Riven" */;
 			buildPhases = (
 				45EFB8645A648B00891B3655 /* Check Pods Manifest.lock */,
 				ECEFD5E31BAF73A500F87110 /* Sources */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "Inst Demo";
+			name = Riven;
 			productName = "Inst Demo";
-			productReference = ECEFD5E71BAF73A500F87110 /* Inst Demo.app */;
+			productReference = ECEFD5E71BAF73A500F87110 /* Riven.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ECEFD5FA1BAF73A500F87110 /* Inst DemoTests */ = {
+		ECEFD5FA1BAF73A500F87110 /* RivenTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECEFD6071BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Inst DemoTests" */;
+			buildConfigurationList = ECEFD6071BAF73A500F87110 /* Build configuration list for PBXNativeTarget "RivenTests" */;
 			buildPhases = (
 				ECEFD5F71BAF73A500F87110 /* Sources */,
 				ECEFD5F81BAF73A500F87110 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				ECEFD5FD1BAF73A500F87110 /* PBXTargetDependency */,
 			);
-			name = "Inst DemoTests";
+			name = RivenTests;
 			productName = "Inst DemoTests";
-			productReference = ECEFD5FB1BAF73A500F87110 /* Inst DemoTests.xctest */;
+			productReference = ECEFD5FB1BAF73A500F87110 /* Riven.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -192,6 +192,7 @@
 				TargetAttributes = {
 					ECEFD5E61BAF73A500F87110 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = E7FPD3YNFW;
 					};
 					ECEFD5FA1BAF73A500F87110 = {
 						CreatedOnToolsVersion = 7.0;
@@ -199,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ECEFD5E21BAF73A500F87110 /* Build configuration list for PBXProject "Inst Demo" */;
+			buildConfigurationList = ECEFD5E21BAF73A500F87110 /* Build configuration list for PBXProject "Riven" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ECEFD5E61BAF73A500F87110 /* Inst Demo */,
-				ECEFD5FA1BAF73A500F87110 /* Inst DemoTests */,
+				ECEFD5E61BAF73A500F87110 /* Riven */,
+				ECEFD5FA1BAF73A500F87110 /* RivenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +316,7 @@
 /* Begin PBXTargetDependency section */
 		ECEFD5FD1BAF73A500F87110 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ECEFD5E61BAF73A500F87110 /* Inst Demo */;
+			target = ECEFD5E61BAF73A500F87110 /* Riven */;
 			targetProxy = ECEFD5FC1BAF73A500F87110 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -428,10 +429,14 @@
 			baseConfigurationReference = AFD50773AAF65BEDE97F2A43 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Inst Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Riven;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Inst Demo/Header.h";
 			};
 			name = Debug;
@@ -441,10 +446,14 @@
 			baseConfigurationReference = 85F8B368B5144B2E17EAC047 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Inst Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Riven;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Inst Demo/Header.h";
 			};
 			name = Release;
@@ -456,8 +465,8 @@
 				INFOPLIST_FILE = "Inst DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-DemoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inst Demo.app/Inst Demo";
+				PRODUCT_NAME = Riven;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riven.app/Riven";
 			};
 			name = Debug;
 		};
@@ -468,15 +477,15 @@
 				INFOPLIST_FILE = "Inst DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TalentSpark.Inst-DemoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inst Demo.app/Inst Demo";
+				PRODUCT_NAME = Riven;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riven.app/Riven";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ECEFD5E21BAF73A500F87110 /* Build configuration list for PBXProject "Inst Demo" */ = {
+		ECEFD5E21BAF73A500F87110 /* Build configuration list for PBXProject "Riven" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECEFD6021BAF73A500F87110 /* Debug */,
@@ -485,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECEFD6041BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Inst Demo" */ = {
+		ECEFD6041BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Riven" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECEFD6051BAF73A500F87110 /* Debug */,
@@ -494,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECEFD6071BAF73A500F87110 /* Build configuration list for PBXNativeTarget "Inst DemoTests" */ = {
+		ECEFD6071BAF73A500F87110 /* Build configuration list for PBXNativeTarget "RivenTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECEFD6081BAF73A500F87110 /* Debug */,
